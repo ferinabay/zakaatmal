@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -24,6 +25,10 @@ class RegisterController extends Controller
 
         ]);
 
-        return response()->json($user);
+        return (new UserResource($user))->additional([
+            'meta' =>[
+                'token'=> $user->api_token,
+            ],    
+        ]);
    }
 }

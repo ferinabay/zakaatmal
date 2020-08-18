@@ -20120,7 +20120,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-md btn-success", attrs: { type: "submit" } },
-        [_vm._v("SIMPAN")]
+        [_vm._v("HITUNG")]
       ),
       _vm._v(" "),
       _c(

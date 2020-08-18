@@ -28,7 +28,7 @@
                              
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-md btn-success">SIMPAN</button>
+                                <button type="submit" class="btn btn-md btn-success">HITUNG</button>
                                 <button type="reset" class="btn btn-md btn-danger">RESET</button>
                             </div>
                         </form>
@@ -51,7 +51,6 @@
                 let uri = 'http://127.0.0.1:8000/api/zakatmal';
                 this.axios.post(uri, {headers: { 'Authorization' : 'Bearer '+ 'token'}},this.zakatmal)
                     .then((response) => {
-                        
                         console.log(response)
                         this.$router.push({
                             name: 'zakatmal'

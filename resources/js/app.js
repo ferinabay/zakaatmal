@@ -12,6 +12,7 @@ import App from './App.vue';
 Vue.use(VueAxios, axios);
 
 import IndexComponent from './components/users/Index.vue';
+import RegisterComponent from './components/users/Register.vue';
 import CreateComponent from './components/users/Create.vue';
 import HitungZakatComponent from './components/users/HitungZakat.vue';
 
@@ -20,6 +21,11 @@ const routes = [{
         name: 'users',
         path: '/',
         component: IndexComponent
+    },
+    {
+        name: 'register',
+        path: '/register',
+        component: RegisterComponent
     },
     {
         name: 'create',
@@ -38,4 +44,6 @@ const router = new VueRouter({
     routes: routes
 });
 
-const app = new Vue(Vue.util.extend({ router }, App)).$mount('#app');
+const app = new Vue(Vue.util.extend({
+    router
+}, App)).$mount('#app');
